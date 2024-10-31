@@ -99,5 +99,13 @@ public class Veiculo {
 	public void setHistoricoManutencoes(ArrayList<Manutencao> historicoManutencoes) {
 		this.historicoManutencoes = historicoManutencoes;
 	}
+
+	@Override
+	public String toString() {
+		return "Veiculo [placa=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", ano=" + ano + ", kmRodados="
+				+ kmRodados + ", historicoManutencoes=" + historicoManutencoes + "]";
+	}
+	
+	
 	
 }

@@ -11,7 +11,7 @@ public class Manutencao {
 		System.out.println("Quilometragem Realizada: " + this.kmRealizada + " km");
 	}
 	
-	public Manutencao() {
+	public Manutencao(String placaManutencao, String manutencaoData, String manutencaoDescri, double manutencaoKm) {
 		super();
 	}
 

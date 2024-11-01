@@ -53,6 +53,8 @@ public class GestaoFrota {
 		Scanner input = new Scanner (System.in);
 		ArrayList<Manutencao> historicoManutencoes = new ArrayList<>();
 		System.out.println();
+		System.out.println("Digite a placa do seu carro: ");
+		String placaManutencao = input.next();
 		System.out.println("Digite a data da sua ultima manutenção.");
 		String manutencaoData = input.next();
 		System.out.println("Digite sua ultima manutenção (uma palavra)");
@@ -60,7 +62,7 @@ public class GestaoFrota {
 		System.out.println("Digite os quilometros rodados na sua ultima manutenção");
 		double manutencaoKm = input.nextDouble();
 		
-		Manutencao manutencao = new Manutencao(manutencaoData, manutencaoDescri, manutencaoKm);
+		Manutencao manutencao = new Manutencao(placaManutencao, manutencaoData, manutencaoDescri, manutencaoKm);
 		historicoManutencoes.add(manutencao);
 		System.out.println();
 		bemVindo();
@@ -88,6 +90,7 @@ public class GestaoFrota {
 	    if (!veiculoEncontrado) {
 	        System.out.println("Veículo com a placa " + placaConsulta + " não encontrado.");
 	    }
+	    bemVindo();
 	}
 	
 	public static void proximaManutencao() {

@@ -102,9 +102,19 @@ public class Veiculo {
 
 	@Override
 	public String toString() {
-		return "Veiculo [placa=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", ano=" + ano + ", kmRodados="
-				+ kmRodados + ", historicoManutencoes=" + historicoManutencoes + "]";
-	}
+		StringBuilder manutencoes = new StringBuilder();
+	    for (Manutencao manutencao : historicoManutencoes) {
+	        manutencoes.append(manutencao.toString()).append(", ");
+	    }
+	    
+	    // Remove a última vírgula e espaço, caso haja alguma manutenção na lista
+	    if (manutencoes.length() > 0) {
+	        manutencoes.setLength(manutencoes.length() - 2);
+	    }
+	    
+	    return "Veiculo [Placa = " + placa + ", Marca = " + marca + ", Modelo = " + modelo + 
+	           ", Ano = " + ano + ", Km Rodados = " + kmRodados + 
+	           ", Historico Manutencoes = " + manutencoes ;	}
 	
 	
 	

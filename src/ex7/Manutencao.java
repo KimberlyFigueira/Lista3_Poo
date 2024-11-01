@@ -45,4 +45,11 @@ public class Manutencao {
 	public void setKmRealizada(double kmRealizada) {
 		this.kmRealizada = kmRealizada;
 	}
+
+	@Override
+	public String toString() {
+		return "Descricao = " + descricao + ", Data = " + data + ", Km realizada = " + kmRealizada;
+	}
+	
+	
 }
